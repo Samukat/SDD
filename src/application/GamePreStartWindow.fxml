@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="preStartPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="540.0" minWidth="-Infinity" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GamePreStartController">
+   <top>
+      <Text fx:id="title1" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="KITTY CATCHER" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Single Day Regular" size="40.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+         <fill>
+            <LinearGradient endX="0.8476190476190477" endY="1.0" startX="0.32380952380952377" startY="1.0">
+               <stops>
+                  <Stop color="#b7e51e" />
+                  <Stop color="#b9e320" offset="0.21" />
+                  <Stop color="BLACK" offset="0.22" />
+                  <Stop color="BLACK" offset="0.68" />
+                  <Stop color="#b9e320" offset="0.69" />
+                  <Stop color="#b7e51e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+   </top>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="title3" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Play Game" textAlignment="CENTER">
+               <font>
+                  <Font name="Single Day Regular" size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Text>
+            <BorderPane prefHeight="375.0" prefWidth="350.0">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="90.0">
+                           <children>
+                              <Label text="Difficulty">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="0(easy), 100(hard)">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Size">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="1 (small), 3(large)">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="267.0">
+                           <children>
+                              <Slider fx:id="difficultySlider" showTickLabels="true" value="50.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin></Slider>
+                              <Slider fx:id="sizeSlider" blockIncrement="1.0" majorTickUnit="1.0" max="3.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="2.0">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Slider>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <right>
+                  <Label prefHeight="92.0" prefWidth="115.0" text="Note: Diffent settings will effect score. To maximise score set difficulty to 100 and size to 1" wrapText="true" BorderPane.alignment="TOP_RIGHT" />
+               </right>
+            </BorderPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="50.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="title2" fill="#1c1e15" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="CENTER">
+               <font>
+                  <Font name="Single Day Regular" size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Text>
+            <BorderPane prefHeight="375.0" prefWidth="350.0">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox maxHeight="-Infinity" prefHeight="141.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Wins:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Total Games:">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Top Score:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" prefHeight="100.0" prefWidth="289.0">
+                           <children>
+                              <Label fx:id="winsLbl" text="0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalLbl" text="0">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="topLbl" text="0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="50.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="70.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="logoutButton" alignment="CENTER" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#logoutButtonPressed" prefHeight="50.0" prefWidth="150.0" styleClass="mainButtons" stylesheets="@application.css" text="LOGOUT" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="resetButton" alignment="CENTER" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#settingButtonPressed" prefHeight="50.0" prefWidth="150.0" styleClass="mainButtons" stylesheets="@application.css" text="ACC. SETTING" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="180.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="startButton" alignment="CENTER" layoutX="796.0" layoutY="9.0" mnemonicParsing="false" onAction="#startButtonPressed" prefHeight="50.0" prefWidth="150.0" styleClass="mainButtons" stylesheets="@application.css" text="START GAME" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,30 @@
+.mainButtons{
+	-fx-border-width: 3px;
+	-fx-border-color: #b7e51e;
+	
+	/*https://yqnn.github.io/svg-path-editor/ */
+	-fx-shape:  "M 0 0 H 8 L 10 2 L 8 4 L 0 4 L -2 2 L 0 0";
+	-fx-background-color: transparent;
+}
+
+.mainButtons:hover{
+	-fx-border-width: 4px;
+	-fx-background-color: rgba(0,0,0,.02);
+}
+
+.mainButtons:pressed{
+	-fx-border-width: 5px;
+	-fx-background-color: rgba(0,0,0,.04);
+}
+
+.list-cell 
+{
+ 	-fx-font: 12pt "Arial";
+}
+
+
+
+GuestButton {
+	-fx-shape:  "M 0 0 H 8 L 10 2 L -2 2 L 0 0";
+}
+
